@@ -2,8 +2,12 @@ variable "sample" {
     default = "Welcome To Terraform"
 }
 
+output "sample" {
+    default = "Wecome To Terraform Training"
+}
+
 variable "sample_op" {
-    value = var.sample
+    value = "Welcome to terraform training"
 }
 
 output "sample_var_op" {
