@@ -1,4 +1,5 @@
 city    = "Bangalore"
+state   = "AndhraPradesh"
 
 # You can declare all the values or the default values in a file that ends with terraform.tfvars
 
