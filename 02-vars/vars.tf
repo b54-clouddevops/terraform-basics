@@ -48,7 +48,7 @@ variable "example_map" {
 }
 
 output "example_map_op" {
-    value = "We are learning ${var.example_map[Training]} and this is our ${var.example_map[Batch]} and the it is ${var.example_map[Online]} "
+    value = "We are learning ${var.example_map[Training]} and this is our ${var.example_map[Batch]} and the it is ${var.example_map[Mode]} "
 }
 
 
