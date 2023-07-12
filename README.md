@@ -27,13 +27,23 @@ Important Terminolog In Terraform
 
 ```
 
-```
+
 If you want to supply any values of the variable from the command line. 
+```
 
     $ terraform plan -var VARNAME=value
     $ terraform apply -auto-approve -var VARNAME=value
 
 ```
+
+If you want to supply any values of the variable from the anyother file apart from terraform.tfvars, you need to explicity pass the varaible file name to be used . 
+```
+
+    $ terraform plan -var-file=dev.tfvars
+    $ terraform apply -auto-approve -var-file=dev.tfvars
+
+```
+
 
 ### precedence 
 
