@@ -35,6 +35,13 @@ If you want to supply any values of the variable from the command line.
 
 ```
 
+### precedence 
+
+```
+    When compared to the values of the variables declared in terraform.tfvars, command line variables will have higher precendence
+```
+
+
 
 
 In this training, we would be using the latest version of terraform `v1.5.2` ( 10/July/2023 )
