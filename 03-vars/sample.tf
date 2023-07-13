@@ -13,8 +13,8 @@ output "state_name" {
     value  = "Out State name is ${var.state}"
 }
 
-variable "cold_city" {}
+variable "coldcity" {}
 
 output "cold_city_output" {
-    value = " cold city value is ${var.cold_city} "
+    value = " cold city value is ${var.coldcity} "
 }
