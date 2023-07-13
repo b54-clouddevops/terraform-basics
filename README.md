@@ -8,11 +8,11 @@ Most of the information in terraform should be referred from `terraform registry
     https://registry.terraform.io/?
 ```
 
-Important Terminolog In Terraform 
+Important Terminology In Terraform 
 
 ```
-    1) Arguments
-    2) Attributes
+    1) Arguments     : Properties of the resource as apart of the resource creation
+    2) Attributes    : Properties of the resource which can be only after the resource creation.
     3) Providers
     4) Modules
 ```
@@ -49,6 +49,19 @@ If you want to supply any values of the variable from the anyother file apart fr
 
 ```
     When compared to the values of the variables declared in terraform.tfvars, command line variables will have higher precendence
+
+    -var / -var-file   >  terraform.auto.tfvars  > terraformtfvars > shell variables
+```
+
+
+### Shell Based Variables :
+
+```
+    These are the variables with least priority and this can be supplied by shell using export.
+
+        $ export TF_VAR_varName=value 
+    
+    This is how we can supply the shell based variables
 ```
 
 
