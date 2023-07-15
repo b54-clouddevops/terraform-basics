@@ -64,6 +64,92 @@ If you want to supply any values of the variable from the anyother file apart fr
     This is how we can supply the shell based variables
 ```
 
+### What exactly happens when you run `terraform plan`  ? 
+
+```
+    When you run a terraform plan,  terraform is going to check the CURRENT STATE OF THE INFRASTRUCTURE and then it validates with what's there in the code that you're suppling against the terraform state file.
+
+    If there are any changes ( how it comes to know ? Becuase of the above validation) , then terraform shows that to you during plan output.
+
+    If you wan to want those changes, then you need to a `terraform apply` , when you do a terraform apply, your state will also be updated
+
+    Eventually, your manual changes will be wiped off.
+```
+
+### Terraform has created some infrasturcure and then you manually went and updated the changes of the INFRA using console. Now if you Terraform Apply with the same old code , what will happen ???
+
+```
+    For Terraform, whatever is there in the CODE and as per that PLAN will be generated and for terraform PLAN is the source of truth, which means when you do a `terraform apply` , all your manual changes will be wiped off.
+
+    99% of the times, a good setup will ensure you as a user won't be having write access on the console.
+    Only the IAM Role, which we use to configure JENKINS will only have right access.
+
+```
+
+### All the operations are supposed to go by terraform only, what all ?
+
+```
+    READ
+    WRITE
+    UPDATE
+    DELETE
+```
+
+
+### If statefile is that much important, what will happen ?
+
+```
+
+STATEFILE is going to capture everything that was created by terrform and if you lost that, you lost all your changes or tracking made by terraform and it's very very crucial so you need to ensure you need to have quite strong strategy to save it and organize it.
+
+```
+
+### Where should I store my statefile ?
+
+```
+In a team based environment, you should never save your statefile locally and this is to ensure to collaborate in the team based
+environment.
+
+It's always recommened to save state on the top of available REMOTE BACKENDS
+```
+
+### What is a backend ?
+
+```
+Backend is a place, where we are going to save our statefile. It can also be local ( means state will be saved locally : Which is not a recommended solution)
+
+Ref : https://developer.hashicorp.com/terraform/language/settings/backends/configuration
+```
+
+### Remote Backend :
+
+```
+Type of remote backend is 100% based on the type of selected Remote Backend.
+```
+
+
+### What all needs to be considered when dealing with REMOTE Statefiles on AWS S3 Bucket as a part of the security measure.
+
+```
+1) Ensure no one has the ability or capability to delete that S3 Bucket ( Object Storage Service on AWS )
+2) Objection Versioning on S3 should be enabled to capture all the changes along with their versions ( Just like GIT )
+3) Ensure encryption is enabled by your own KMS Key ( either symmeric or asymmetric )
+
+```
+
+
+
+
+In organizations, 100% of the infra will be built using TERRAFORM Only and manual changes are 100% strictly not allowed.
+
+
+
+
+
+
+
+
+
 
 In this training, we would be using the latest version of terraform `v1.5.2` ( 10/July/2023 )
 
