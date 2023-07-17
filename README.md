@@ -137,7 +137,13 @@ Type of remote backend is 100% based on the type of selected Remote Backend.
 
 ```
 
+### Backend :
 
+```
+The place where you're storing your information is referred as backend and there are 2 types of backends :
+    1) Local 
+    2) Remote ( Multiple Varieties Of Remote Backend are Offered and this is recommended appraoch)
+```
 
 
 In organizations, 100% of the infra will be built using TERRAFORM Only and manual changes are 100% strictly not allowed.
