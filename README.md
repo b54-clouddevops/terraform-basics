@@ -146,12 +146,19 @@ The place where you're storing your information is referred as backend and there
 ```
 
 
+### What is a Module In Terraform and why do we need Modules in Terraform ?
+
+```
+Module is like a folder with the groups of resources to be created.
+
+```
+
+**Advantages of Using Terraform Modules**
+```
+By using modules, you can significantly reduce the amount of code you need to write and maintain. Rather than repeating the same code, you can create a module and reference it multiple times, passing different parameters.
+```
+
 In organizations, 100% of the infra will be built using TERRAFORM Only and manual changes are 100% strictly not allowed.
-
-
-
-
-
 
 
 
