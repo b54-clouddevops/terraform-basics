@@ -155,8 +155,6 @@ In organizations, 100% of the infra will be built using TERRAFORM Only and manua
 
 
 
-
-
 In this training, we would be using the latest version of terraform `v1.5.2` ( 10/July/2023 )
 
 Terraform supports more 3,339 cloud providers and this keep on growing and this is the major reason why manority of the companies prefer to create infrastucture using terraform.
