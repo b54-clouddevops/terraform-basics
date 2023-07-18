@@ -169,6 +169,12 @@ In organizations, 100% of the infra will be built using TERRAFORM Only and manua
 ```
 
 
+### Data Source: 
+
+```
+This helps in extracting the information of the already existing resources and using this we can fetch the information of any existing resource.
+```
+
 
 In this training, we would be using the latest version of terraform `v1.5.2` ( 10/July/2023 )
 
