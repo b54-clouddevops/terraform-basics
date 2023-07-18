@@ -6,7 +6,7 @@
 
 module "ec2" {
   source = "./ec2"
-  sg     = module.sg.sdid                               # Step 2: Pass the output declared in the source module to this root module
+  sg     = module.sg.sgid                               # Step 2: Pass the output declared in the source module to this root module
 }
 
 module "sg" {
