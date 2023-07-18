@@ -1,4 +1,4 @@
-# Not the statefile is remote and this is what we use in a team based appraoch
+# Now the statefile is remote and this is what we use in a team based appraoch
 
 terraform {
   backend "s3" {

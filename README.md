@@ -160,6 +160,14 @@ By using modules, you can significantly reduce the amount of code you need to wr
 
 In organizations, 100% of the infra will be built using TERRAFORM Only and manual changes are 100% strictly not allowed.
 
+## Challenges with modules.
+
+```
+    1) If we are using modules, shareing the outputs and referencing the created resource attirbutes accorss the modules is not a direct task
+    2) Passing outputs from module to module is not a direct process.
+    3) If you want to send the outputs of Module-A to Module-B, it will never be a direct processs. Module-A has to pass the output information to root-module and then root-module has to pass the information to to the Module-B
+```
+
 
 
 In this training, we would be using the latest version of terraform `v1.5.2` ( 10/July/2023 )
