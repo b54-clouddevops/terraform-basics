@@ -202,7 +202,7 @@ But using triggers, we can control when they can triggered.
 
 2) If your provisioner runs inside the infra, in this case even if your provisioner fails because of any reason, terraform records this particular event as failure and marks it as tained.
 
-3) When a resource is marked as tainted in terraform state file, this particular resource will be subjected to recreated when you do a  `terraform apply` in the next run.
+3) When a resource is marked as tainted in terraform state file, this particular resource will be subjected to recreation when you do a  `terraform apply` in the next run.
 
 4) If your provisioner runs outside the infra, in this case even if your provisioner fails because of any reason, terraform records this particular event as failure and marks it as tained against that particular provisioner only. In this case, your resource won't be subjected to failure.
 
