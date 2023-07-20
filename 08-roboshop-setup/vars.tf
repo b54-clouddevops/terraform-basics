@@ -29,7 +29,7 @@
         payment = {
             APP_VERSION = "0.0.3"
         },
-        frotnend = {
+        frontend = {
             APP_VERSION = "0.0.3"
         }
     }
