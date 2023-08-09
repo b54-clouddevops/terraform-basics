@@ -189,7 +189,7 @@ Provisioners are used to execure actions on the local machine or on a remote mac
 ***NOTE***
 ```
 Provisioners are by default create-time, which means they will only be executed during the infra creation only and it's wont be run again.
-We also have comething called destry-time provisoioners, which means they will only be executed during the infra destroy only
+We also have comething called destroy-time provisioners, which means they will only be executed during the infra destroy only
 
 But using triggers, we can control when they can triggered.
 ```
@@ -252,3 +252,22 @@ Infrastructure is becoming more dynamic: Infrastructure is also becoming more dy
 The need for automation: The need for automation is growing as the complexity and dynamism of infrastructure increases. Terraform provides a way to automate the provisioning and management of infrastructure, which can help to improve efficiency and reduce errors.
 
 I hope this helps! Let me know if you have any other questions.
+
+
+
+# How Infra has to be built and what's the order ?
+```
+    1) VPC 
+    2) ALB 
+    3) DB's 
+    4) Backend Components [ catalogue | cart | user | shipping | payment | frontend ] : Parallel 
+```
+
+# How Infra has to be destroted and what's the order ?
+
+```
+    1) Backend Components [ catalogue | cart | user | shipping | payment | frontend ] : Parallel 
+    2) DB's 
+    3) ALB 
+    4) VPC 
+```
